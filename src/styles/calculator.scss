@@ -37,7 +37,6 @@
   );
 }
 
-//! TOP SECTION
 .calc_top {
   padding: 80px 20px 0px 20px;
 
@@ -67,33 +66,6 @@
   }
 }
 
-// .calc_checkbox {
-//   input[type='checkbox'] {
-//     -moz-appearance: none;
-//     -webkit-appearance: none;
-//     -o-appearance: none;
-//     outline: none;
-//     content: none;
-//   }
-
-// input[type='checkbox']:before {
-//   // font-family: 'FontAwesome';
-//   // content: '\f00c';
-//   font-size: 20px;
-//   // color: transparent !important;
-//   // background: $white;
-//   // display: block;
-//   width: 15px;
-//   height: 15px;
-//   border: 2px solid $metal-light; //TODO this should be $gradient-metal-light
-//   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-// }
-
-// input[type='checkbox']:checked:before {
-//   color: black !important;
-// }
-
-//! MID SECTION
 .calc_mid {
   border-collapse: separate;
   border-spacing: 20px 0px;
@@ -146,7 +118,6 @@
   }
 }
 
-//! BOTTOM SECTION
 .calc_bot {
   padding: 0px 20px 80px 20px;
 }
@@ -241,8 +212,6 @@ input::-webkit-inner-spin-button {
   background: $metal-light;
 }
 
-/* //! Checkbox */
-// TODO gradient border.
 .checkbox_container {
   display: flex;
   flex-direction: row;
@@ -282,18 +251,6 @@ input::-webkit-inner-spin-button {
   border-radius: 4px;
   background: $white;
 }
-
-// [type='checkbox']:checked + label::before {
-//   content: '';
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   width: 20px;
-//   height: 20px;
-//   outline: 2px solid $metal-light; // TODO should be $gradient-metal-light
-//   border-radius: 4px;
-//   background: $white;
-// }
 
 [type='checkbox']:checked + label::after {
   content: '✓';
