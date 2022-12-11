@@ -1,0 +1,73 @@
+@import './_colors.scss';
+
+@mixin toRem($property, $value) {
+  #{$property}: calc($value / 16) + rem;
+}
+
+@mixin heading {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+h1 {
+  @include heading;
+  // font-size: 40px;
+  @include toRem(font-size, 40);
+  line-height: 50px;
+  color: $white;
+}
+
+h2 {
+  @include heading;
+  // font-size: 32px;
+  @include toRem(font-size, 32);
+  line-height: 35px;
+}
+
+h4 {
+  @include heading;
+  // font-size: 24px;
+  @include toRem(font-size, 24);
+  line-height: 25px;
+  color: $metal-dark;
+}
+
+p {
+  font-weight: 400;
+  // font-size: 18px;
+  @include toRem(font-size, 18);
+  line-height: 30px;
+  color: $white;
+  margin: 0;
+}
+
+@mixin inputLabel {
+  font-weight: 400;
+  // font-size: 14px;
+  @include toRem(font-size, 14);
+  line-height: 20px;
+  color: $metal-dark;
+}
+
+/* 
+Fonts
+https://fonts.google.com/specimen/Sora
+*/
+
+@font-face {
+  font-family: 'Sora';
+  src: url('../fonts/Sora-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('../fonts/Sora-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
