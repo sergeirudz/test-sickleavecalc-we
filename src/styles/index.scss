@@ -1,0 +1,17 @@
+@import './_colors.scss';
+@import './_fonts.scss';
+@import './calculator.scss';
+@import './textBlock.scss';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Sora;
+  color: $white;
+  background: $gradient-metal;
+}
+
+* {
+  box-sizing: border-box;
+}
