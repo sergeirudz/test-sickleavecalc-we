@@ -1,0 +1,264 @@
+@import './_colors.scss';
+@import './fonts.scss';
+@import './_mediaQueries.scss';
+
+.calc_container {
+  h4 {
+    color: $metal-dark;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: $white;
+
+  @include toRem(width, 320);
+  width: 320px;
+  height: 755px;
+  background: $white;
+
+  @include phone {
+    width: 100%;
+  }
+
+  --angle: 20px;
+  clip-path: polygon(
+    0 var(--angle),
+    // 40px 40px,
+    var(--angle) 0,
+    calc(100% - var(--angle)) 0,
+    // calc(100% - 40px) 40px,
+    100% var(--angle),
+    100% calc(100% - var(--angle)),
+    // calc(100% - 40px) calc(100% - 40px),
+    calc(100% - var(--angle)) 100%,
+    var(--angle) 100%,
+    // 40px calc(100% - 40px),
+    0 calc(100% - var(--angle))
+  );
+}
+
+//! TOP SECTION
+.calc_top {
+  padding: 80px 20px 0px 20px;
+
+  .calc_input_wrapper {
+    position: relative;
+
+    & > span {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+      color: $metal-dark;
+    }
+  }
+
+  .calc_income,
+  .calc_days {
+    font-family: 'Sora';
+    padding-left: 7px;
+    width: 100%;
+    letter-spacing: 0.04em;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+// .calc_checkbox {
+//   input[type='checkbox'] {
+//     -moz-appearance: none;
+//     -webkit-appearance: none;
+//     -o-appearance: none;
+//     outline: none;
+//     content: none;
+//   }
+
+// input[type='checkbox']:before {
+//   // font-family: 'FontAwesome';
+//   // content: '\f00c';
+//   font-size: 20px;
+//   // color: transparent !important;
+//   // background: $white;
+//   // display: block;
+//   width: 15px;
+//   height: 15px;
+//   border: 2px solid $metal-light; //TODO this should be $gradient-metal-light
+//   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+// }
+
+// input[type='checkbox']:checked:before {
+//   color: black !important;
+// }
+
+//! MID SECTION
+.calc_mid {
+  border-collapse: separate;
+  border-spacing: 20px 0px;
+
+  .header,
+  .days {
+    td {
+      padding: 0px;
+      height: 15px;
+    }
+  }
+
+  th,
+  td {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+    color: $metal-dark;
+    width: 130px;
+  }
+
+  .days {
+    td {
+      padding-top: 0;
+      font-weight: 700;
+    }
+  }
+
+  .sum {
+    td {
+      height: 20px;
+      padding-top: 10px;
+      padding-bottom: 0px;
+      font-weight: 700;
+      @include toRem(font-size, 18);
+      line-height: 20px;
+    }
+  }
+
+  .allowance {
+    td {
+      font-weight: 400;
+      height: 15px;
+      @include toRem(font-size, 12);
+      line-height: 15px;
+      color: $metal-middle;
+      padding: 0;
+    }
+  }
+}
+
+//! BOTTOM SECTION
+.calc_bot {
+  padding: 0px 20px 80px 20px;
+}
+
+.calc_top,
+.calc_mid,
+.calc_bot {
+  width: 100%;
+}
+
+.calc_compensationDays {
+  color: $metal-dark;
+  text-align: center;
+  font-weight: 400;
+  @include toRem(font-size, 14);
+  line-height: 15px;
+}
+.calc_compensationSum {
+  color: $metal-dark;
+  text-align: center;
+  font-weight: 700;
+  @include toRem(font-size, 24);
+  line-height: 30px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.calc_form {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  & .calc_income {
+    flex-grow: 1;
+  }
+
+  & .calc_label {
+    @include inputLabel;
+    margin-bottom: 5px;
+  }
+
+  & .calc_income,
+  .calc_days {
+    margin-bottom: 20px;
+    height: 50px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    border: 2px;
+    border-style: solid;
+    border-color: $metal-light;
+  }
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calc_button {
+  width: 169px;
+  height: 60px;
+  border-radius: 30px;
+  background: $gradient-red;
+  margin-top: 20px;
+
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+
+  & span {
+    @include toRem(font-size, 18);
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    line-height: 20px;
+    color: $white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  background: $metal-light;
+}
+
+/* //! Checkbox */
+// TODO gradient border.
+.checkbox_label {
+  color: $metal-dark;
+  font-family: Sora;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  margin-right: 10px;
+}
