@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/styles/index.scss" />
+  <title>Sick Leave Calculator</title>
+  <meta name="description" content="Calculate your sick leave compensation">
+</head>
+
+<body>
+  <main class="body_wrapper">
+    <div class="text_container">
+      <div class="text_topSection">
+        <h1>Quam Tristique Condimentum</h1>
+        <p>
+          Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+          lacinia odio sem nec elit. Cum sociis natoque penatibus et magnis dis
+          parturient montes, nascetur ridiculus mus.
+          <span class="text_red">Curabitur blandit</span> tempus porttitor.
+          Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+          Vestibulum id ligula porta felis euismod semper.
+        </p>
+      </div>
+
+      <div class="text_middleSection">
+        <div class="text_wrapper">
+          <h2>Fringilla Euismod Adipiscing Ipsum</h2>
+          <p>
+            Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Maecenas faucibus mollis interdum. Aenean
+            lacinia bibendum nulla sed.
+          </p>
+        </div>
+        <!-- TODO srcset for image -->
+        <img src="./src/images/image.png" alt="image" class="image" />
+      </div>
+      <div class="text_bottomSection">
+        <ul>
+          <li>Tellus Ullamcorper Inceptos</li>
+          <li>Magna Condimentum
+            <ul>
+              <li>Mattis Tristique</li>
+              <li>Pharetra Pellentesque Dapibus</li>
+            </ul>
+          </li>
+          <li>Aenean Inceptos</li>
+          <li>Parturient Bibendum</li>
+        </ul>
+      </div>
+    </div>
+    <div class="calc_container">
+      <div class="calc_top">
+        <h4>Compensation Calculator</h4>
+        <form action="submit" class="calc_form" id="form">
+          <label htmlFor="income" class="calc_label">
+            Average Income
+          </label>
+          <div class="calc_input_wrapper">
+            <input type="number" class="calc_income" id="income" value="1500" />
+            <span>€</span>
+          </div>
+          <label htmlFor="income" class="calc_label">
+            Days on sick-leave
+          </label>
+          <div class="calc_input_wrapper">
+            <input type="number" class="calc_days" value="7" id="days" />
+            <span>days</span>
+          </div>
+          <label for="checkbox" class="checkbox_label"><input type="checkbox" id="checkbox" class="checkbox"
+              name="remember" value="1">I have
+            tuberculosis</label>
+          <button type="submit" class="calc_button"><span>Calculate</span></button>
+        </form>
+      </div>
+      <hr class="divider">
+      <table class="calc_mid">
+        <col style=" width:50%">
+        <col style="width:50%">
+        <tr class="header">
+          <th>The employer compensates</th>
+          <th>Health Insurance compensates</th>
+        </tr>
+        <tr class="days">
+          <td><span id="employer_compensates_days">4</span> days</td>
+          <td><span id="government_compensates_days">0</span> days</td>
+        </tr>
+        <tr class="sum">
+          <td id="employer_compensates_sum">112,00€</td>
+          <td id="government_compensates_sum">0,00€</td>
+        </tr>
+        <tr class="allowance">
+          <td>Daily allowance</td>
+          <td>Daily allowance</td>
+        </tr>
+        <tr class="allowance">
+          <td><span id="employer_daily_allowance">28,00</span> €</td>
+          <td><span id="government_daily_allowance">28,00</span> €</td>
+        </tr>
+      </table>
+      <hr class="divider">
+      <table class="calc_bot">
+        <tr>
+          <th class="calc_compensationDays">
+            Compensation total for <span id="total_compensation_day">7</span> days (net)
+          </th>
+        </tr>
+        <tr>
+          <td class="calc_compensationSum">
+            <span id="total_compensation_sum">112,00€</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    </div>
+    <script type="module" src="/src/app.js"></script>
+</body>
+
+</html>
