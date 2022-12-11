@@ -1,3 +1,7 @@
+# App video preview
+
+https://github.com/sergeirudz/test-sickleavecalc-we/tree/master/public/Preview.mp4
+
 # What I used
 
 - Since the assignment required Sass I used Vite build tool for a better development experience. Rollup will do the bundling for SCSS and JS. Alternative would be to use Webpack/snowpack/parcel/rollup but Vite offers a lot configuration.
@@ -13,3 +17,5 @@ npm run build
 this will generate a JS bundle with Rollup in the dist folder.
 
 # Time spent
+
+![Time spent](https://github.com/sergeirudz/test-sickleavecalc-we/tree/master/public/Time.png)
