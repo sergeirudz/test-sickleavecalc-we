@@ -13,7 +13,6 @@
 
 h1 {
   @include heading;
-  // font-size: 40px;
   @include toRem(font-size, 40);
   line-height: 50px;
   color: $white;
@@ -21,14 +20,12 @@ h1 {
 
 h2 {
   @include heading;
-  // font-size: 32px;
   @include toRem(font-size, 32);
   line-height: 35px;
 }
 
 h4 {
   @include heading;
-  // font-size: 24px;
   @include toRem(font-size, 24);
   line-height: 25px;
   color: $metal-dark;
@@ -36,7 +33,6 @@ h4 {
 
 p {
   font-weight: 400;
-  // font-size: 18px;
   @include toRem(font-size, 18);
   line-height: 30px;
   color: $white;
@@ -45,7 +41,6 @@ p {
 
 @mixin inputLabel {
   font-weight: 400;
-  // font-size: 14px;
   @include toRem(font-size, 14);
   line-height: 20px;
   color: $metal-dark;

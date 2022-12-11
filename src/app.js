@@ -162,7 +162,7 @@ function formatCurrency(number) {
     .split('')
     .reverse()
     .join('');
-  return euros + '.' + cents.slice(0, 2) + '€';
+  return euros + ',' + cents.slice(0, 2) + '€';
 }
 
 function netSalary(grossSalary) {
